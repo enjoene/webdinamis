@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Anggun Roshyerla</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	</head> 
+	<body>
+		
+		<!-- sidebar -->
+		<input type="checkbox" id="check">
+		<div class="sidebar">
+			<ul>
+				<li><a href="#Kalkulator">Kalkulator</a></li>
+				<li><a href="#Luas Persegi Panjang">Luas Persegi Panjang</a></li>
+				<li><a href="#Luas Lingkaran">Luas Lingkaran</a></li>
+				<li><a href="#Luas Segitiga">Luas Segitiga</a></li>
+				<li><a href="#Umur">Umur</a></li>
+			</ul>
+		</div>
+
+		<!-- bagian header -->
+		<header>
+			<div class="container">
+				<h1><a href="">Halaman Web Dinamis - Anggun Roshyerla</a></h1>
+				<ul>
+					<li><a href="#Kalkulator">Kalkulator</a></li>
+					<li><a href="#Luas Persegi Panjang">Luas Persegi Panjang</a></li>
+					<li><a href="#Luas Lingkaran">Luas Lingkaran</a></li>
+					<li><a href="#Luas Segitiga">Luas Segitiga</a></li>
+					<li><a href="#Umur">Umur</a></li>
+				</ul>
+
+				<!-- menu mobile -->
+				<label for="check" class="mobile-menu"><i class="fas fa-bars fa-2x"></i></label>
+			</div>
+		</header>
+
+		<!-- bagian banner -->
+		<section class="banner">
+			<div class="container">
+				<div class="banner-left">
+					<p><h2>Javascript Menu :<br></p></h2>
+					<p>1. Kalkulator</p>
+					<p>2. Luas Persegi Panjang</p>
+					<p>3. Luas Lingkaran</p>
+					<p>4. Luas Segitiga</p>
+					<p>5. Umur</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- bagian kalkulator -->
+		<section id="kalkulator">
+			<div class="container">
+				<h3>Kalkulator</h3>
+				</style>
+				<div class="Wrap">
+				<form name ="cal">
+				<input type="text" name ="display">
+					<br><br>
+						<input type="button" value ="9" onclick ="cal.display.value+='9'">
+						<input type="button" value ="8" onclick ="cal.display.value+='8'">
+						<input type="button" value ="7" onclick ="cal.display.value+='7'">
+						<input type="button" value ="+" onclick ="cal.display.value+='+'">
+					<br><br>
+						<input type="button" value ="6" onclick ="cal.display.value+='6'">
+						<input type="button" value ="5" onclick ="cal.display.value+='5'">
+						<input type="button" value ="4" onclick ="cal.display.value+='4'">
+						<input type="button" value ="-" onclick ="cal.display.value+='-'">
+					<br><br>
+						<input type="button" value ="3" onclick ="cal.display.value+='3'">
+						<input type="button" value ="2" onclick ="cal.display.value+='2'">
+						<input type="button" value ="1" onclick ="cal.display.value+='1'">
+						<input type="button" value ="*" onclick ="cal.display.value+='*'">
+					<br><br>
+						<input type="button" value ="0" onclick ="cal.display.value+='0'">
+						<input type="button" value ="/" onclick ="cal.display.value+='/'">
+						<input type="button" value ="%" onclick ="cal.display.value+='%'">
+						<input type="button" value ="=" onclick ="cal.display.value =eval(cal.display.value)">
+					<br><br>
+						<input type="button" value ="DELETE" onclick ="cal.display.value=''" id="del">
+						<input type="button" value ="." onclick ="cal.display.value+='.'">
+				</form>
+			</div>
+		</section>
+
+		<!-- bagian umur -->
+		<section id="umur">
+			<div class="container">
+				<h3>Umur</h3>
+				<body>
+ 				<p>Gunakan fungsi dibawah ini untuk menghitung usia(dalam hari)</p>
+ 				<script language = "javascript">
+ 		<!--
+ 		function hitungUsia(){
+				var sekarang = new Date();
+				var tanggal = parseInt(document.forms[0].tanggal.value);
+				var bulan = parseInt(document.forms[0].bulan.value)-1;
+				var tahun = parseInt(document.forms[0].tahun.value);
+				var tglLahir = new Date(tahun, bulan, tanggal);
+				var selisih = (Date.parse(sekarang.toGMTString())-Date.parse(tglLahir.toGMTString()))/(1000*60*60*24);
+				document.forms[0].usia.value = Math.floor(selisih);
+				var kdHari = tglLahir.getDay();
+				var namaHari = "";
+				switch (kdHari){
+				case 0 : namaHari = "Minggu"; break;
+				case 1 : namaHari = "Senin"; break;
+				case 2 : namaHari = "Selasa"; break;
+				case 3 : namaHari = "Rabu"; break;
+				case 4 : namaHari = "Kamis"; break;
+				case 5 : namaHari = "Jumat"; break;
+				case 6 : namaHari = "Saptu"; break;
+					       }
+			document.forms[0].hari.value = namaHari;
+				    }
+		//-->
+			</script>
+				<form>
+					Masukan Tanggal Lahir (1-31): <input type="text" name="tanggal" size="2" /><br/>
+					Masukan Bulan Lahir (1-12): <input type="text" name="bulan" size="2" /><br/>
+					Masukan Tahun Lahir (4 digit): <input type="text" name="tahun" size="4" /><br/>
+					<input type="button" name="proses" value="proses" onClick="hitungUsia()"/><br />
+					<hr>
+					Anda lahir Hari: <input type="text" name="hari" /><br />
+					Anda Berusia: <input type="text" name="usia" /><br/>
+				</form>
+			</div>
+		</section>
+
+		<!-- Luas Persegi Panjang -->
+		<section id="Luas Persegi Panjang">
+			<div class="container">
+				<h3>Luas Persegi Panjang</h3>
+				<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <script type="text/javascript">
+            function hitungLuas(){
+                panjang = document.getElementById("txtPanjang").value;
+                lebar = document.getElementById("txtLebar").value;
+                Luas = panjang * lebar;
+                document.getElementById("txtLuas").value =  Luas;
+            }
+        </script>
+		    <body>
+		        Menghhitung Luas Persegi Panjang<br/>
+		        Panjang : <input type="text" id="txtPanjang" name="txtPanjang"><br/>
+		        Lebar : <input type="text" id="txtLebar" name="txtLebar"><br/>
+		        <input type="button" id="btnHitung" value="Hitung Luas" onclick="hitungLuas();"><br/>
+		        Luas : <input type="text" id="txtLuas" name="txtLuas">
+		    </body>
+			</div>
+		</section>
+
+		<!-- bagian Luas Lingkaran -->
+		<section id="Luas Lingkaran">
+			<div class="container">
+				<h3>Luas Lingkaran</h3>
+				<div class="col">
+				<meta charset="UTF-8">
+			<body>
+				<input type="number" placeholder="Masukkan Nilai Jari-Jari Lingkaran (cm)" id="jari"> 
+				<button onclick="lingkaran()">Hitung Keliling Lingkaran</button>
+				Hasil : <span id="hasil"></span>
+				<br>
+				<br>
+				<input type="number" placeholder="Masukkan Nilai Jari-Jari Lingkaran (cm)" id="luas"> 
+				<button onclick="lingkaran()">Hitung Luas Lingkaran</button>
+				Hasil : <span id="hasilluas"></span>
+			</div>
+		</section>
+
+		<!-- bagian luas segitiga -->
+		<section id="Luas segitiga">
+			<div class="container">
+				<h3>Luas Segitiga</h3>
+				<div class="col-3">
+				<meta http-equiv="Content-Type" content="text/html; charset=iso-   8859-1">
+      			<script type="text/javascript">
+            function hitungLuas(){
+                alas=document.getElementById("txtAlas").value;
+                tinggi=document.getElementById("txtTinggi").value;
+                Luas=1/2*alas*tinggi;
+                document.getElementById("txtLuas").value = Luas;
+            }
+		        </script>
+		    <body>
+		        Menghitung Luas Segitiga<br/>
+		        Alas : <input type="text" id="txtAlas" name="txtAlas"><br/>
+		        Tinggi : <input type="text" id="txtTinggi" name="txtTinggi"><br/>
+		        <input type="button" id="btnHitung" value="Hitung Luas"onclick="hitungLuas();"><br/>
+		        Luas : <input type="text" id="txtLuas" name="txtLuas">
+		    <body>
+			</div>
+		</section>
+
+		<!-- bagian footer -->
+		<footer>
+			<div class="container">
+				<small>copyright &copy; 2020 - Anggun Roshyerla - Otomasi Perkantoran AKSI Gresik.</small>
+			</div>
+		</footer>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
